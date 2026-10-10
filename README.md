@@ -24,6 +24,14 @@ but every colour and word is yours to change.
    the cards flip to "Happy Birthday" and the 2 × 10 clue.
 10. **Notes → the scroll ties shut → a keepsake booklet** with save buttons.
 
+## No-code builder — no code, just a friendly chat
+Open the page with **`#build`** on the end of the URL. The live demo is at
+`https://niki-co.github.io/birthday-experience/#build`.
+
+A friendly chat then asks for everything — the name, the date it unlocks, the
+password, the photos, the song and all ten gifts — and generates a
+**personalised page you download as a single file**. No code, no files to edit.
+
 ## Quick start
 ```bash
 npm install
