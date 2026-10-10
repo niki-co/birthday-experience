@@ -1,0 +1,312 @@
+@import "tailwindcss";
+
+/* ============================================================
+   [Name] — Birthday Experience
+   Aesthetic: Chinese cinematic.
+   Ink night, cinnabar red, imperial gold, jade, rice paper.
+   Lanterns, xiangyun clouds, plum blossoms, seal chops,
+   moon gates, paper-cut, lattice.
+   ============================================================ */
+@theme {
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-brush: "Ma Shan Zheng", "Playfair Display", serif;
+  --font-hanzi: "Noto Serif SC", "Playfair Display", serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat", "Segoe Script", cursive;
+
+  --color-ink: #0d0a12;
+  --color-ink2: #16111f;
+  --color-plum: #241a30;
+  --color-indigo: #1b1633;
+
+  --color-cinnabar: #c8102e;
+  --color-cinnabar-soft: #e0505f;
+  --color-gold: #e3b23c;
+  --color-gold-soft: #f0d38a;
+  --color-jade: #3a9d8f;
+
+  --color-moon: #f6f0e4;
+  --color-cream: #f6f0e4;
+  --color-plum-deep: #0d0a12;
+  --color-rose: #e0505f;
+  --color-rice: #efe4cf;
+  --color-rice-deep: #ddc9a3;
+  --color-blossom: #e79aa8;
+
+  --radius-scrap: 14px;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-ink);
+  color: var(--color-moon);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+}
+
+/* ---------- the stage: an ink night with drifting clouds ---------- */
+.stage {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: max(env(safe-area-inset-top), 1rem) 1rem max(env(safe-area-inset-bottom), 1rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.stage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(227, 178, 60, 0.16), transparent 55%),
+    radial-gradient(90% 60% at 15% 115%, rgba(200, 16, 46, 0.18), transparent 60%),
+    radial-gradient(90% 60% at 90% 120%, rgba(58, 157, 143, 0.14), transparent 60%),
+    linear-gradient(180deg, #171122 0%, #0d0a12 100%);
+}
+/* faint lattice (窗棂) over everything */
+.stage::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.05;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(240, 211, 138, 0.5) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(90deg, rgba(240, 211, 138, 0.5) 0 1px, transparent 1px 34px);
+  pointer-events: none;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 30rem;
+  margin: auto;
+}
+
+/* ---------- type ---------- */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.brush {
+  font-family: var(--font-brush);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.hanzi {
+  font-family: var(--font-hanzi);
+}
+.hand {
+  font-family: var(--font-hand);
+}
+.play {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.30em;
+  padding-left: 0.30em; /* balances the trailing letter-space so it centres */
+  font-size: 0.66rem;
+  color: var(--color-gold);
+  opacity: 0.9;
+}
+.gold-text {
+  background: linear-gradient(180deg, #f6e3a8, #e3b23c 55%, #b98a24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.85rem 1.7rem;
+  border: 1px solid rgba(227, 178, 60, 0.5);
+  background: linear-gradient(180deg, rgba(227, 178, 60, 0.24), rgba(227, 178, 60, 0.08));
+  color: var(--color-gold-soft);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), inset 0 0 12px rgba(227, 178, 60, 0.08);
+}
+.btn:hover {
+  background: linear-gradient(180deg, rgba(227, 178, 60, 0.34), rgba(227, 178, 60, 0.12));
+}
+.btn:active {
+  transform: translateY(1px) scale(0.985);
+}
+.btn-red {
+  border-color: rgba(200, 16, 46, 0.6);
+  background: linear-gradient(180deg, rgba(200, 16, 46, 0.55), rgba(200, 16, 46, 0.28));
+  color: #ffe6ea;
+}
+.btn-red:hover {
+  background: linear-gradient(180deg, rgba(200, 16, 46, 0.7), rgba(200, 16, 46, 0.36));
+}
+.btn-ghost {
+  border-color: rgba(246, 240, 228, 0.25);
+  background: transparent;
+  color: var(--color-moon);
+}
+
+/* ---------- surfaces ---------- */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(227, 178, 60, 0.18);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+.paper {
+  position: relative;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.5), transparent 60%),
+    linear-gradient(180deg, var(--color-rice), var(--color-rice-deep));
+  color: #3a2c1a;
+  border-radius: var(--radius-scrap);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.5);
+}
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(120, 90, 40, 0.06) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(0deg, rgba(120, 90, 40, 0.05) 0 1px, transparent 1px 6px);
+}
+.scroll-paper {
+  background: linear-gradient(180deg, #f6efdd, #e6d5b2);
+  color: #3a2c1a;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- motifs ---------- */
+/* a red lantern */
+.lantern {
+  position: relative;
+  width: 34px;
+  height: 46px;
+  border-radius: 46% / 40%;
+  background: radial-gradient(circle at 35% 30%, #ff6b7d, #c8102e 60%, #7d0a1d);
+  box-shadow: 0 0 22px rgba(200, 16, 46, 0.55), inset -6px 0 10px rgba(0, 0, 0, 0.3);
+}
+.lantern::before,
+.lantern::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 6px;
+  background: linear-gradient(180deg, #f0d38a, #b98a24);
+  border-radius: 3px;
+}
+.lantern::before {
+  top: -4px;
+}
+.lantern::after {
+  bottom: -4px;
+}
+
+/* seal / chop */
+.seal {
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #d7263d, #a30f26);
+  color: #ffe9ec;
+  font-family: var(--font-hanzi);
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.5), inset 0 0 0 2px rgba(255, 230, 234, 0.25);
+}
+
+/* ---------- animations ---------- */
+@keyframes sway {
+  0%, 100% { transform: rotate(-6deg) }
+  50% { transform: rotate(6deg) }
+}
+@keyframes sway2 {
+  0%, 100% { transform: rotate(5deg) }
+  50% { transform: rotate(-7deg) }
+}
+@keyframes fall {
+  0% { transform: translateY(-8vh) translateX(0) rotate(0deg); opacity: 0 }
+  10% { opacity: 1 }
+  100% { transform: translateY(112vh) translateX(30px) rotate(420deg); opacity: 0.9 }
+}
+@keyframes drift {
+  0% { transform: translateX(-12%) }
+  100% { transform: translateX(112%) }
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.55 }
+  50% { opacity: 0.95 }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+}
+@keyframes flicker {
+  0%, 100% { transform: scaleY(1) rotate(-1deg); opacity: 1 }
+  25% { transform: scaleY(1.08) rotate(1.5deg); opacity: 0.92 }
+  50% { transform: scaleY(0.94) rotate(-0.5deg); opacity: 0.98 }
+  75% { transform: scaleY(1.05) rotate(1deg); opacity: 0.9 }
+}
+@keyframes rise {
+  from { transform: translateY(0); opacity: 1 }
+  to { transform: translateY(-120vh); opacity: 0 }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg) }
+}
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0 }
+  70% { transform: scale(1.06); opacity: 1 }
+  100% { transform: scale(1); opacity: 1 }
+}
+@keyframes sheen {
+  0% { background-position: -200% 0 }
+  100% { background-position: 200% 0 }
+}
+.anim-float { animation: floaty 4s ease-in-out infinite; }
+.anim-pop { animation: pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.anim-glow { animation: glow 3s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
