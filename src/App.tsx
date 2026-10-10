@@ -15,6 +15,7 @@ import Reveal from './scenes/Reveal'
 import Notes from './scenes/Notes'
 import Close from './scenes/Close'
 import Keepsake from './scenes/Keepsake'
+import Builder from './builder/Builder'
 
 const MAP: Record<SceneId, ComponentType> = {
   invitation: Invitation,
@@ -51,6 +52,9 @@ function Journey() {
 }
 
 export default function App() {
+  const isBuild =
+    typeof window !== 'undefined' && window.location.hash.replace('#', '') === 'build'
+  if (isBuild) return <Builder />
   return (
     <StoreProvider>
       <ProgressDots />
