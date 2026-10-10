@@ -37,6 +37,7 @@ const html = `<!doctype html>
 </head>
 <body>
 <div id="root"></div>
+<script id="bd-content">window.__BIRTHDAY_CONTENT__ = null;</script>
 <script>${js}</script>
 </body>
 </html>
