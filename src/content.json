@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "name": "[Name]",
+    "from": "[You]",
+    "turning": 20
+  },
+  "invitation": {
+    "eyebrow": "A sealed invitation",
+    "title": "For [Name]",
+    "message": "Something has been wrapped and sealed for you. It opens on your day — not a moment sooner. Until then, this is all you get to see.",
+    "unlockISO": "",
+    "venue": "right here, on this page",
+    "photos": []
+  },
+  "password": {
+    "eyebrow": "One lock remains",
+    "prompt": "Whisper the year you arrived.",
+    "hint": "Four digits. The year the world got lucky.",
+    "answer": "2000"
+  },
+  "delivery": {
+    "eyebrow": "Special delivery",
+    "courier": "Courier",
+    "lines": [
+      "Parcel for one very specific person…",
+      "Sign here. Or just breathe. That works too.",
+      "Handle with care. It's been a long journey."
+    ],
+    "parcelLabel": "To: [Name] — do not open early"
+  },
+  "magazine": {
+    "eyebrow": "The unwrapping",
+    "coverTitle": "[Name]",
+    "coverSubtitle": "The Birthday Issue",
+    "coverTag": "Collector's Edition",
+    "pages": []
+  },
+  "celebration": {
+    "eyebrow": "Happy Birthday",
+    "title": "Make a wish",
+    "photo": "",
+    "candleCount": 20,
+    "wish": "Blow, and make it count.",
+    "tries": [
+      "Almost! Give it one more breath…",
+      "So close — the candles are stubborn tonight.",
+      "There we go. Wish granted."
+    ]
+  },
+  "applause": {
+    "eyebrow": "The crowd goes wild",
+    "title": "Mic drop",
+    "lines": [
+      "That was, hands down, the best candle-blowing this venue has ever seen.",
+      "Standing ovation. Somewhere, a stranger is weeping with joy."
+    ]
+  },
+  "gifts": [
+    {
+      "id": "jar",
+      "type": "jar",
+      "title": "The Jar of Stars",
+      "points": 2,
+      "blurb": "Twenty folded stars. Every one hides something.",
+      "from": "[You]",
+      "stars": [
+        { "type": "note", "text": "You are, objectively, the best thing this family has ever produced. Sorry to everyone else." },
+        { "type": "wish", "text": "May you always find money in old jacket pockets." },
+        { "type": "dare", "text": "DARE: send me the last photo in your camera roll. No deleting first." },
+        { "type": "note", "text": "Remember the wedding? You danced like nobody was watching. Nobody was. It was glorious." },
+        { "type": "photo", "src": "" },
+        { "type": "wish", "text": "May your chai always be exactly the right temperature." }
+      ]
+    },
+    {
+      "id": "certificate",
+      "type": "certificate",
+      "title": "Official Certificate",
+      "points": 2,
+      "body": "This certifies that [Name] has officially survived another year, with honours.",
+      "awardedBy": "The Department of Extremely Serious Matters"
+    },
+    {
+      "id": "cd",
+      "type": "cd",
+      "title": "The Mixtape",
+      "points": 2,
+      "photos": [],
+      "song": {
+        "title": "",
+        "artist": "",
+        "src": ""
+      }
+    },
+    {
+      "id": "photobooth",
+      "type": "photobooth",
+      "title": "The Photo Booth",
+      "points": 2,
+      "caption": "Four frames. Zero shame.",
+      "photos": []
+    },
+    {
+      "id": "magazine",
+      "type": "magazine",
+      "title": "The Magazine",
+      "points": 2,
+      "pages": []
+    },
+    {
+      "id": "reel",
+      "type": "reel",
+      "title": "The Highlight Reel",
+      "points": 2,
+      "clips": []
+    },
+    {
+      "id": "coupons",
+      "type": "coupons",
+      "title": "Coupons Against [You]",
+      "points": 2,
+      "coupons": [
+        {
+          "name": "Labour Coupon",
+          "detail": "One (1) chore of your choosing, no complaints."
+        },
+        {
+          "name": "Forgiveness Coupon",
+          "detail": "One free pass. Use it wisely."
+        },
+        {
+          "name": "Wish Fulfilment Coupon",
+          "detail": "One reasonable wish, granted."
+        },
+        {
+          "name": "Fight Advantage Coupon",
+          "detail": "You win the next argument. Automatically."
+        }
+      ]
+    },
+    {
+      "id": "darkweb",
+      "type": "darkweb",
+      "title": "The Archive",
+      "points": 2,
+      "prompt": "Type a name. Any name.",
+      "entries": []
+    },
+    {
+      "id": "stickers",
+      "type": "stickers",
+      "title": "Sticker Pack",
+      "points": 2,
+      "stickers": []
+    },
+    {
+      "id": "spinner",
+      "type": "spinner",
+      "title": "The Future Teller",
+      "points": 2,
+      "options": [
+        "You will receive a gift today.",
+        "A mild inconvenience will befall a small appliance.",
+        "Someone nearby is thinking of you (it's us).",
+        "You will misplace something, then find it.",
+        "A great snack is in your future."
+      ]
+    }
+  ],
+  "puzzle": {
+    "eyebrow": "You collected twenty",
+    "cardTitle": "Happy 20th Birthday",
+    "clue": "You've been counting all night. What's 2 × 10?",
+    "reveal": "It's 20. It's you. The whole thing was counting down to your day.",
+    "image": ""
+  },
+  "notes": {
+    "eyebrow": "Before you go",
+    "title": "A few last things",
+    "items": [],
+    "goodbye": "Happy birthday, [Name]. Here's to the next twenty."
+  },
+  "keepsakes": {
+    "eyebrow": "Wait — one more delivery",
+    "title": "We forgot to pack these",
+    "message": "Everything from tonight, in one place. Take whatever you want home with you.",
+    "items": []
+  }
+}
