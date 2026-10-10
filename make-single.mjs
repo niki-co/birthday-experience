@@ -42,6 +42,5 @@ const html = `<!doctype html>
 </html>
 `
 fs.mkdirSync('dist', { recursive: true })
-fs.writeFileSync('dist/[Name]-Birthday.html', html)
-fs.writeFileSync('/scratch/output/[Name]-Birthday.html', html)
+fs.writeFileSync('dist/index.html', html)
 console.log('single file written:', (html.length / 1024).toFixed(0), 'KB')
